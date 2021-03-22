@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    /*Primary*/
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /*Neutral*/
+    --VeryDarkBlue: hsl(234, 12%, 34%, 0.1);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--VeryLightGray);
+}
+
+header{
+    margin-top: 90px;
+    margin: 90px auto 0;
+    text-align: center;
+    display: grid;
+    max-width: 500px;
+    place-items: center;
+}
+header h1{
+    font-weight: 200;
+    font-size: 40px;
+}
+h1 span {
+    font-weight: 600;
+}
+
+header h5{
+    margin-top: 0;
+ /*   width: 290px;*/
+    color: var(--GrayishBlue);
+}
+
+section{
+    margin-top: 15px;
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 35px;;
+}
+section p{
+    font-size: 15px;
+    color: var(--GrayishBlue);
+
+}
+.card{
+    background-color: white;
+    box-shadow: 0 10px 20px var(--VeryDarkBlue), 0 6px 6px hsl(234, 12%, 34%, 0.3);
+    border-radius: 11px;
+        width: 350px;
+    margin: 15px;
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+}
+.card::after{
+    content:'';
+    position: absolute;
+    top: 0; left: 0;
+    height: 5px;
+    width: 100%;
+}
+
+.cardCenter{
+    transform: translateY(50%);
+}
+
+.cardOne::after{
+    background-color: var(--Red) ;
+}
+.cardTwo::after{
+    background-color: var(--Cyan) ;
+}
+.cardThree::after{
+    background-color: var(--Orange) ;
+}
+.cardFour::after{
+    background-color: var(--Blue) ;
+}
+.card img{
+    display: block;
+    margin-left:80% ;
+}
+@media (max-width :885px) {
+    header  {
+        max-width: 300px;
+    }
+     header h1{
+        font-size: 1.5em !important;
+    }
+    h2{
+        font-size: 1.17em;
+    }
+     h5{
+        max-width: 290px;
+    }
+    .cardCenter{
+        transform: translateY(0px);
+    }
+}
