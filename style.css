@@ -51,6 +51,7 @@ section{
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
+    margin-top : 20px;
 }
 section p{
     font-size: 15px;
